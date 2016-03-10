@@ -5,23 +5,22 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3B896927-A46C-459E-8300-7476C076028B}</ProjectGuid>
+    <ProjectGuid>{0282E428-B474-4462-93EC-0D59DB3E2CEB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Transverse</RootNamespace>
-    <AssemblyName>Transverse</AssemblyName>
+    <RootNamespace>BusinessLogic</RootNamespace>
+    <AssemblyName>BusinessLogic</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
-    <TargetFrameworkProfile />
-    <NuGetPackageImportStamp>0f5ab658</NuGetPackageImportStamp>
+    <NuGetPackageImportStamp>9245cfe0</NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\Web\bin\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -29,17 +28,27 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>..\BreezeGoodlife\bin\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Common.Logging">
-      <HintPath>..\packages\Common.Logging.3.0.0\lib\net40\Common.Logging.dll</HintPath>
+    <Reference Include="Common.Logging, Version=3.3.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Logging.3.3.1\lib\net40\Common.Logging.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Common.Logging.Core">
-      <HintPath>..\packages\Common.Logging.Core.3.0.0\lib\net40\Common.Logging.Core.dll</HintPath>
+    <Reference Include="Common.Logging.Core, Version=3.3.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Logging.Core.3.3.1\lib\net40\Common.Logging.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CodeAnalysis, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeAnalysis.Common.1.1.1\lib\net45\Microsoft.CodeAnalysis.dll</HintPath>
@@ -69,15 +78,36 @@
       <HintPath>..\packages\Microsoft.CodeAnalysis.Workspaces.Common.1.1.1\lib\net45\Microsoft.CodeAnalysis.Workspaces.Desktop.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Mvc.4.0.1\lib\net45\Microsoft.Practices.Unity.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Newtonsoft.Json.8.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="Quartz">
+    <Reference Include="Quartz, Version=2.3.3.0, Culture=neutral, PublicKeyToken=f6b8c98a402cc8a4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Quartz.2.3.3\lib\net40\Quartz.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -106,123 +136,92 @@
       <HintPath>..\packages\Microsoft.Composition.1.0.30\lib\portable-net45+win8+wp8+wpa81\System.Composition.TypedParts.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net" />
     <Reference Include="System.Reflection.Metadata, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Reflection.Metadata.1.1.0\lib\portable-net45+win8\System.Reflection.Metadata.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.1.0\lib\net40\WebActivatorEx.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Attributes\DateTimeConverterAttribute.cs" />
-    <Compile Include="Attributes\EnumConverterFromStringToEnumAttribute.cs" />
-    <Compile Include="Attributes\EnumConverterFromStringToIntAttribute.cs" />
-    <Compile Include="Constants.cs" />
-    <Compile Include="Enums\ActiveType.cs" />
-    <Compile Include="Enums\CouponStatus.cs" />
-    <Compile Include="Enums\DeviceType.cs" />
-    <Compile Include="Enums\LanguageEnum.cs" />
-    <Compile Include="Enums\ValueType.cs" />
-    <Compile Include="Enums\RoleEnum.cs" />
-    <Compile Include="Interfaces\Business\IDatabaseMigrationsBusiness.cs" />
-    <Compile Include="Interfaces\DAL\IDatabaseMigrationsRepository.cs" />
-    <Compile Include="Interfaces\DAL\IDbContext.cs" />
-    <Compile Include="Interfaces\DAL\IRepository.cs" />
-    <Compile Include="Models\Business\BaseModel.cs" />
-    <Compile Include="Models\DAL\Category.cs" />
-    <Compile Include="Models\DAL\CategoryLocalize.cs" />
-    <Compile Include="Models\DAL\Configuration.cs" />
-    <Compile Include="Models\DAL\Coupon.cs" />
-    <Compile Include="Models\DAL\CouponLocalize.cs" />
-    <Compile Include="Models\DAL\Coupon_Category.cs" />
-    <Compile Include="Models\DAL\Coupon_Device_Queue.cs" />
-    <Compile Include="Models\DAL\Coupon_RedeemCode_Device.cs" />
-    <Compile Include="Models\DAL\Coupon_Outlet.cs" />
-    <Compile Include="Models\DAL\Deal.cs" />
-    <Compile Include="Models\DAL\DealLocalize.cs" />
-    <Compile Include="Models\DAL\Deal_Category.cs" />
-    <Compile Include="Models\DAL\Deal_Outlet.cs" />
-    <Compile Include="Models\DAL\Device.cs" />
-    <Compile Include="Models\DAL\DeviceRegistration.cs" />
-    <Compile Include="Models\DAL\History.cs" />
-    <Compile Include="Models\DAL\InternalMessage.cs" />
-    <Compile Include="Models\DAL\Merchant.cs" />
-    <Compile Include="Models\DAL\Notification.cs" />
-    <Compile Include="Models\DAL\Outlet.cs" />
-    <Compile Include="Models\DAL\OutletLocalize.cs" />
-    <Compile Include="Models\DAL\Role.cs" />
-    <Compile Include="Models\DAL\sysdiagram.cs" />
-    <Compile Include="Models\DAL\TermAndCondition.cs" />
-    <Compile Include="Models\DAL\User.cs" />
+    <Compile Include="DatabaseMigrations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Utils\LayoutHelpers.cs" />
-    <Compile Include="Utils\ModelBinders\DateTimeModelBinder.cs" />
-    <Compile Include="Utils\PropertiesDifference.cs" />
-    <Compile Include="Utils\Validations\ApiValidateModel.cs" />
-    <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Framework.Datatable\Framework.Datatable.csproj">
-      <Project>{4B150FF4-6271-46F4-827B-69D84A08F2DB}</Project>
-      <Name>Framework.Datatable</Name>
+    <ProjectReference Include="..\DatabaseAccess\DatabaseAccess.csproj">
+      <Project>{0E819927-433E-41B7-A768-DAD1C6511974}</Project>
+      <Name>DatabaseAccess</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Framework.DI.Contracts\Framework.DI.Contracts.csproj">
-      <Project>{A3AD040F-95C6-4551-9B30-6A865E1B67C4}</Project>
-      <Name>Framework.DI.Contracts</Name>
+    <ProjectReference Include="..\Transverse\Transverse.csproj">
+      <Project>{3b896927-a46c-459e-8300-7476c076028b}</Project>
+      <Name>Transverse</Name>
     </ProjectReference>
     <ProjectReference Include="..\Framework.DataAccess.Contracts\Framework.DataAccess.Contracts.csproj">
       <Project>{D62DE88A-8F87-4B30-B4E3-23E158626514}</Project>
       <Name>Framework.DataAccess.Contracts</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Framework.Datatable\Framework.Datatable.csproj">
+      <Project>{4B150FF4-6271-46F4-827B-69D84A08F2DB}</Project>
+      <Name>Framework.Datatable</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework.DI.Contracts\Framework.DI.Contracts.csproj">
+      <Project>{a3ad040f-95c6-4551-9b30-6a865e1b67c4}</Project>
+      <Name>Framework.DI.Contracts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Framework.LinqSupport\Framework.LinqSupport.csproj">
-      <Project>{F8D34B45-1116-454B-A387-00962D321549}</Project>
+      <Project>{f8d34b45-1116-454b-a387-00962d321549}</Project>
       <Name>Framework.LinqSupport</Name>
     </ProjectReference>
     <ProjectReference Include="..\Framework.Logger.Contracts\Framework.Logger.Contracts.csproj">
       <Project>{BB598103-B8CD-4635-8F2B-0D59C9B39AE1}</Project>
       <Name>Framework.Logger.Contracts</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Framework.DI.Unity\Framework.DI.Unity.csproj">
+      <Project>{33BBC438-F6A7-4952-B975-7CBDB5824ADD}</Project>
+      <Name>Framework.DI.Unity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework.Logger.Contracts\Framework.Logger.Contracts.csproj">
+      <Project>{BB598103-B8CD-4635-8F2B-0D59C9B39AE1}</Project>
+      <Name>Framework.Logger.Contracts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Framework.Logger.Log4Net\Framework.Logger.Log4Net.csproj">
-      <Project>{D5677135-186A-47CB-9392-38ABB4BE7048}</Project>
+      <Project>{d5677135-186a-47cb-9392-38abb4be7048}</Project>
       <Name>Framework.Logger.Log4Net</Name>
     </ProjectReference>
     <ProjectReference Include="..\Framework.Utility\Framework.Utility.csproj">
@@ -230,7 +229,9 @@
       <Name>Framework.Utility</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
