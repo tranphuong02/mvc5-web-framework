@@ -46,6 +46,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseAccess", "DatabaseA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogic", "BusinessLogic\BusinessLogic.csproj", "{0282E428-B474-4462-93EC-0D59DB3E2CEB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{441FCFED-6366-4E62-A389-72E85A72AB37}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -104,11 +106,16 @@ Global
 		{0282E428-B474-4462-93EC-0D59DB3E2CEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0282E428-B474-4462-93EC-0D59DB3E2CEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0282E428-B474-4462-93EC-0D59DB3E2CEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{441FCFED-6366-4E62-A389-72E85A72AB37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{441FCFED-6366-4E62-A389-72E85A72AB37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{441FCFED-6366-4E62-A389-72E85A72AB37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{441FCFED-6366-4E62-A389-72E85A72AB37}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{441FCFED-6366-4E62-A389-72E85A72AB37} = {1D90108E-5C7E-4017-9AAF-4991548CCDBA}
 		{0282E428-B474-4462-93EC-0D59DB3E2CEB} = {1814F651-11C0-4949-9210-B924A3A7970E}
 		{0E819927-433E-41B7-A768-DAD1C6511974} = {0700C5BA-A8B7-4248-899B-37FEA62E3AA6}
 		{3B896927-A46C-459E-8300-7476C076028B} = {609A12AC-C4CC-4C82-9153-19769AF51442}
