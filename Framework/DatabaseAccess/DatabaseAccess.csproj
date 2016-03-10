@@ -176,6 +176,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Migrations\DatabaseMigrations.cs" />
     <Compile Include="Models\FrameworkContext.cs" />
     <Compile Include="Models\RetryDbConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
